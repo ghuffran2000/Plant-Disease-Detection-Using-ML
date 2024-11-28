@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Disease Detection</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body style="background-image: url('bg.jpg'); background-size: cover; background-position: center;">
+
+  <div class="appbar">
+    <h1 class="title">Maize Crop Disease</h1>
+  </div>
+  <div class="main-container">
+    <div class="grid-container">
+      <div class="image-card" id="image-card">
+        <div class="dropzone" id="dropzone">
+          <input type="file" id="fileInput" accept="image/*" style="display: none;">
+          <p>Drag and drop an image or click to select</p>
+        </div>
+        <div class="detail" id="loading" style="display: none;">
+          <div class="loader"></div>
+          <h6>Processing</h6>
+        </div>
+        <div class="detail" id="result" style="display: none;">
+          <img id="resultImage" src="" alt="Uploaded Image" class="preview-image">
+          <p>Label: <span id="label"></span></p>
+          <p>Confidence: <span id="confidence"></span></p>
+        </div>
+      </div>
+      <button id="clearButton" class="clear-button" style="display: none;">Clear</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
